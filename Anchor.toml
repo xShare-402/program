@@ -1,0 +1,19 @@
+[toolchain]
+
+[features]
+seeds = false
+resolution = false
+skip-lint = false
+
+[programs.localnet]
+xshare = "6AszQASdX67xtwpVVBSRsba3NFmh8FS3su6t152TXWgp"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "?????"
+wallet = "/Users/carlos/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

@@ -1,0 +1,29 @@
+[package]
+name = "xshare"
+version = "0.1.1"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "xshare"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+brine-ed25519 = {version = "0.2.0"}
+ephemeral-rollups-sdk = {version="=0.3.7", features=["anchor"]}
+solana-curve25519 = "^2.0.13"
+proc-macro2 = "=1.0.103"
+anchor-lang = {version="0.31.1", features = ["init-if-needed"]}
+solana-program = "2.3.0"
+bytemuck = { version = "1.24.0", features = ["derive", "min_const_generics"]}
+mpl-token-metadata = { version = "5.1.0" }
+anchor-spl = "0.31.1"
+mpl-bubblegum = {version = "2.1.1"}

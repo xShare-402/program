@@ -1,0 +1,29 @@
+[package]
+name = "racingz"
+version = "0.1.1"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "racingz"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+thiserror = "1.0"
+anchor-lang = {version="0.30.0", features = ["init-if-needed"]}
+anchor-spl = "0.30.0"
+static_assertions = "1.1.0"
+url = "2.2.2"
+solana-program = "1.18.22"
+bytemuck = { version = "1.4.0", features = ["derive", "min_const_generics"]}
+mpl-token-metadata = { version = "5.1.0" }
+mpl-bubblegum = {version = "1.4.0"}
+spl-account-compression = { version="0.4.1", features = ["no-entrypoint"] }
